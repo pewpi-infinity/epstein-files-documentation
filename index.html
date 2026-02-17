@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Epstein Files — Verified Public Record Documentation</title>
+<meta name="description" content="Factual documentation of the Jeffrey Epstein case based on DOJ releases, court documents, and verified public records. No speculation. Sources cited."/>
+<style>
+:root {
+  --bg: #0a0e14;
+  --surface: #111822;
+  --border: #222d3d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --dim: #555;
+  --accent: #ef4444;
+  --link: #6366f1;
+  --gold: #f5c542;
+  --cyan: #06d6e0;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:system-ui,sans-serif; line-height:1.7; }
+a { color:var(--link); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+.container { max-width:900px; margin:0 auto; padding:20px; }
+
+header {
+  border-bottom:2px solid var(--accent);
+  padding:40px 0 20px;
+  margin-bottom:40px;
+}
+h1 { font-size:28px; font-weight:800; color:var(--text); margin-bottom:8px; }
+.subtitle { font-size:13px; color:var(--muted); margin-bottom:16px; }
+.disclaimer {
+  background:rgba(239,68,68,0.08);
+  border:1px solid rgba(239,68,68,0.2);
+  border-radius:8px;
+  padding:12px 16px;
+  font-size:12px;
+  color:var(--muted);
+  margin-top:16px;
+}
+.disclaimer strong { color:var(--accent); }
+
+.last-updated { font-size:11px; color:var(--dim); margin-top:8px; }
+
+/* Sections */
+section { margin-bottom:48px; }
+h2 {
+  font-size:18px;
+  font-weight:700;
+  color:var(--cyan);
+  border-bottom:1px solid var(--border);
+  padding-bottom:8px;
+  margin-bottom:16px;
+}
+h3 { font-size:14px; font-weight:700; color:var(--gold); margin:20px 0 8px; }
+
+/* Timeline */
+.timeline { position:relative; padding-left:24px; }
+.timeline::before {
+  content:'';
+  position:absolute;
+  left:6px; top:0; bottom:0;
+  width:2px;
+  background:var(--border);
+}
+.event {
+  position:relative;
+  margin-bottom:24px;
+  padding:12px 16px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:8px;
+}
+.event::before {
+  content:'';
+  position:absolute;
+  left:-22px; top:16px;
+  width:10px; height:10px;
+  background:var(--accent);
+  border-radius:50%;
+}
+.event-date { font-size:11px; color:var(--accent); font-weight:700; letter-spacing:1px; }
+.event-text { font-size:13px; margin-top:4px; }
+.event-source { font-size:11px; color:var(--dim); margin-top:6px; }
+
+/* Person cards */
+.person-card {
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:16px;
+  margin-bottom:12px;
+}
+.person-name { font-size:14px; font-weight:700; color:var(--text); }
+.person-status {
+  display:inline-block;
+  font-size:10px;
+  font-weight:700;
+  padding:2px 8px;
+  border-radius:4px;
+  margin-left:8px;
+  letter-spacing:0.5px;
+}
+.status-documented { background:rgba(239,68,68,0.15); color:var(--accent); }
+.status-named { background:rgba(245,197,66,0.15); color:var(--gold); }
+.status-cleared { background:rgba(34,197,94,0.15); color:#22c55e; }
+.status-unknown { background:rgba(85,85,85,0.15); color:var(--dim); }
+.person-detail { font-size:12px; color:var(--muted); margin-top:6px; }
+.person-source { font-size:11px; color:var(--dim); margin-top:8px; }
+
+/* Stats */
+.stats-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+  gap:12px;
+  margin-bottom:24px;
+}
+.stat-card {
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:16px;
+  text-align:center;
+}
+.stat-number { font-size:24px; font-weight:800; color:var(--cyan); }
+.stat-label { font-size:10px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; }
+
+/* Source list */
+.source-list { list-style:none; padding:0; }
+.source-list li {
+  padding:8px 0;
+  border-bottom:1px solid var(--border);
+  font-size:12px;
+}
+.source-list li:last-child { border-bottom:none; }
+.source-tag {
+  display:inline-block;
+  font-size:9px;
+  font-weight:700;
+  padding:1px 6px;
+  border-radius:3px;
+  margin-right:6px;
+  letter-spacing:0.5px;
+}
+.tag-gov { background:rgba(6,214,224,0.15); color:var(--cyan); }
+.tag-court { background:rgba(139,92,246,0.15); color:#8b5cf6; }
+.tag-news { background:rgba(245,197,66,0.15); color:var(--gold); }
+.tag-factcheck { background:rgba(34,197,94,0.15); color:#22c55e; }
+
+footer {
+  border-top:1px solid var(--border);
+  padding:24px 0;
+  font-size:11px;
+  color:var(--dim);
+  text-align:center;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>Epstein Files — Verified Public Record</h1>
+  <div class="subtitle">Factual documentation based on DOJ releases, court documents, congressional records, and verified journalism. Every claim sourced.</div>
+  <div class="disclaimer">
+    <strong>EDITORIAL STANDARD:</strong> This page contains only information from official government releases, court filings, and fact-checked journalism. No speculation. No conspiracy theories. No fabricated lists. Being named in documents does not imply criminal conduct. Victims' identities are not published here.
+  </div>
+  <div class="last-updated">Last updated: 2026-02-17 &nbsp;|&nbsp; Maintained by <a href="https://github.com/pewpi-infinity">pewpi-infinity</a></div>
+</header>
+
+<!-- Stats -->
+<section>
+  <h2>By the Numbers</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-number">3.5M+</div>
+      <div class="stat-label">Pages Released by DOJ</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">2,000+</div>
+      <div class="stat-label">Videos in DOJ Library</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">180,000+</div>
+      <div class="stat-label">Images Released</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">43+</div>
+      <div class="stat-label">Victim Names Exposed by Failed Redaction</div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section>
+  <h2>Release Timeline</h2>
+  <div class="timeline">
+
+    <div class="event">
+      <div class="event-date">2019</div>
+      <div class="event-text">Jeffrey Epstein arrested on federal sex trafficking charges. Found dead in Manhattan jail cell on August 10, 2019. Medical examiner rules death a suicide by hanging.</div>
+      <div class="event-source">Source: <a href="https://en.wikipedia.org/wiki/Epstein_files">Wikipedia — Epstein Files</a></div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">JANUARY 2024</div>
+      <div class="event-text">Federal judge orders unsealing of court documents from Giuffre v. Maxwell civil case. Hundreds of pages released in batches throughout January. Names include Bill Clinton, Prince Andrew, Les Wexner, Alan Dershowitz, and others.</div>
+      <div class="event-source">Source: <a href="https://www.npr.org/2024/01/03/1222130537/jeffrey-epstein-court-records-reveal-men-clinton-prince-andrew">NPR</a>, <a href="https://time.com/6552063/jeffrey-epsteins-unsealed-court-documents/">TIME</a></div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">NOVEMBER 19, 2025</div>
+      <div class="event-text">Congress passes the Epstein Files Transparency Act (H.R.4405). President Trump signs it the next day. Law requires DOJ to release investigative files within 30 days.</div>
+      <div class="event-source">Source: <a href="https://www.congress.gov/bill/119th-congress/house-bill/4405/text">Congress.gov — H.R.4405</a></div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">DECEMBER 19, 2025</div>
+      <div class="event-text">DOJ releases initial batch. Heavily redacted — over 500 pages entirely blacked out. Draws bipartisan criticism. Faulty redaction technique allows public to recover blacked-out text by copy-pasting.</div>
+      <div class="event-source">Source: <a href="https://www.axios.com/2025/12/19/epstein-files-doj-library-images-photos-trump">Axios</a></div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">JANUARY 30, 2026</div>
+      <div class="event-text">DOJ releases 3+ million additional pages, 2,000+ videos, 180,000+ images. Includes contact lists, flight logs, business records, memos, and photographs. DOJ states this is the final release. Victim advocates criticize: at least 43 victims' full names were accidentally exposed.</div>
+      <div class="event-source">Source: <a href="https://www.justice.gov/opa/pr/department-justice-publishes-35-million-responsive-pages-compliance-epstein-files">DOJ Official</a>, <a href="https://www.cbsnews.com/live-updates/epstein-files-released-doj-2026/">CBS News</a></div>
+    </div>
+
+    <div class="event">
+      <div class="event-date">FEBRUARY 15, 2026</div>
+      <div class="event-text">DOJ sends Congress a list of "politically exposed persons" named in the files. List includes Trump, Clinton, Steve Bannon, Kathy Ruemmler, Les Wexner, and others — with no distinction of context or degree of connection.</div>
+      <div class="event-source">Source: <a href="https://www.cnn.com/2026/02/15/politics/doj-epstein-files-prominent-people">CNN</a></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Named Individuals -->
+<section>
+  <h2>Named Individuals — Verified Court Records</h2>
+  <p style="font-size:12px;color:var(--muted);margin-bottom:16px;">Being named in documents does NOT equal guilt or criminal involvement. Context matters. Status reflects what evidence shows, not allegations alone.</p>
+
+  <h3>Confirmed in Flight Logs / Direct Contact</h3>
+
+  <div class="person-card">
+    <div class="person-name">Bill Clinton <span class="person-status status-documented">IN FLIGHT LOGS</span></div>
+    <div class="person-detail">Confirmed on Epstein's aircraft flight manifests multiple times. One witness testified Epstein told her "Clinton likes them young." Clinton has denied all allegations of criminal involvement and states he had no contact with Epstein for years before the arrest. No victim has publicly accused Clinton directly.</div>
+    <div class="person-source">Source: <a href="https://www.npr.org/2024/01/03/1222130537/jeffrey-epstein-court-records-reveal-men-clinton-prince-andrew">NPR — Court Documents</a></div>
+  </div>
+
+  <div class="person-card">
+    <div class="person-name">Prince Andrew <span class="person-status status-documented">ACCUSED / SETTLED</span></div>
+    <div class="person-detail">Referenced in court documents. Virginia Giuffre accused him of sexual abuse when she was a teenager. Settled with Giuffre in February 2022. Court filings state he "regrets his association with Epstein." Denies allegations.</div>
+    <div class="person-source">Source: <a href="https://www.aljazeera.com/news/2024/1/4/jeffrey-epstein-list-whose-names-are-on-the-newly-unsealed-documents">Al Jazeera</a></div>
+  </div>
+
+  <div class="person-card">
+    <div class="person-name">Ghislaine Maxwell <span class="person-status status-documented">CONVICTED</span></div>
+    <div class="person-detail">Convicted in December 2021 on five of six counts including sex trafficking of a minor. Sentenced to 20 years in federal prison. Central to Epstein's operation per court findings.</div>
+    <div class="person-source">Source: <a href="https://en.wikipedia.org/wiki/Epstein_files">Wikipedia — Epstein Files</a></div>
+  </div>
+
+  <div class="person-card">
+    <div class="person-name">Les Wexner <span class="person-status status-named">NAMED IN DEPOSITIONS</span></div>
+    <div class="person-detail">Billionaire founder of L Brands. Epstein was his money manager. Named in Maxwell's deposition regarding allegations Maxwell denied. Wexner says he cut ties with Epstein in 2007. Denies wrongdoing.</div>
+    <div class="person-source">Source: <a href="https://time.com/6552063/jeffrey-epsteins-unsealed-court-documents/">TIME</a></div>
+  </div>
+
+  <div class="person-card">
+    <div class="person-name">Alan Dershowitz <span class="person-status status-named">NAMED / DENIED</span></div>
+    <div class="person-detail">Named in court documents. Accused by Virginia Giuffre. Has vigorously denied all allegations and pursued legal action against his accuser. Giuffre later recanted her accusations against Dershowitz.</div>
+    <div class="person-source">Source: <a href="https://www.rollingstone.com/culture/culture-news/jeffrey-epstein-court-files-unsealed-1234939060/">Rolling Stone</a></div>
+  </div>
+
+  <h3>Named in 2026 DOJ "Politically Exposed Persons" List</h3>
+
+  <div class="person-card">
+    <div class="person-name">Donald Trump <span class="person-status status-named">NAMED / CONTEXT VARIES</span></div>
+    <div class="person-detail">Appears in DOJ's list of politically exposed persons in the files. Had a known social relationship with Epstein in the 1990s-2000s. Publicly fell out with Epstein. Signed the Epstein Files Transparency Act. No victims have publicly accused Trump in connection with Epstein's trafficking operation in the released court files.</div>
+    <div class="person-source">Source: <a href="https://www.cnn.com/2026/02/15/politics/doj-epstein-files-prominent-people">CNN</a>, <a href="https://www.pbs.org/newshour/nation/a-list-of-powerful-men-named-in-the-epstein-files-from-elon-musk-to-former-prince-andrew">PBS</a></div>
+  </div>
+
+  <div class="person-card">
+    <div class="person-name">Elon Musk <span class="person-status status-named">NAMED IN FILES</span></div>
+    <div class="person-detail">Named in 2026 DOJ release. Context and degree of connection not yet fully detailed in public reporting. Appears in communications within the released documents.</div>
+    <div class="person-source">Source: <a href="https://www.pbs.org/newshour/nation/a-list-of-powerful-men-named-in-the-epstein-files-from-elon-musk-to-former-prince-andrew">PBS News</a></div>
+  </div>
+
+  <div class="person-card">
+    <div class="person-name">Kathryn Ruemmler <span class="person-status status-named">SOCIAL CONNECTION</span></div>
+    <div class="person-detail">Former Obama White House counsel (2011-2014). Had social relationship with Epstein. In 2015 email called him "like having another older brother." Epstein used this connection to arrange a White House tour.</div>
+    <div class="person-source">Source: <a href="https://www.npr.org/2026/01/30/nx-s1-5693904/epstein-files-doj-trump">NPR</a></div>
+  </div>
+
+  <h3>NOT Found in Records</h3>
+
+  <div class="person-card">
+    <div class="person-name">Barack Obama <span class="person-status status-cleared">NOT IN FILES</span></div>
+    <div class="person-detail">Does not appear in any confirmed flight manifests, contact lists, communications, or investigative files connected to Epstein. Obama Presidential Library FOIA (22-18632-F) returned staff-level correspondence only. Social media "visitor lists" including Obama have been confirmed fabricated by multiple fact-checkers.</div>
+    <div class="person-source">Source: <a href="https://www.obamalibrary.gov/digital-research-room/finding-aids/records-related-jeffrey-epstein-and-ghislaine-maxwell-22-18632-f">Obama Library FOIA</a>, <a href="https://www.aap.com.au/factcheck/hanks-obama-among-names-on-fake-epstein-list/">AAP Fact Check</a></div>
+  </div>
+
+</section>
+
+<!-- Official Sources -->
+<section>
+  <h2>Primary Sources</h2>
+  <ul class="source-list">
+    <li><span class="source-tag tag-gov">GOV</span><a href="https://www.justice.gov/epstein">DOJ Epstein Library — Official Document Repository</a></li>
+    <li><span class="source-tag tag-gov">GOV</span><a href="https://www.justice.gov/opa/pr/department-justice-publishes-35-million-responsive-pages-compliance-epstein-files">DOJ — 3.5 Million Pages Release Statement (Jan 30, 2026)</a></li>
+    <li><span class="source-tag tag-gov">GOV</span><a href="https://www.congress.gov/bill/119th-congress/house-bill/4405/text">Epstein Files Transparency Act — Full Text (H.R.4405)</a></li>
+    <li><span class="source-tag tag-gov">GOV</span><a href="https://www.obamalibrary.gov/digital-research-room/finding-aids/records-related-jeffrey-epstein-and-ghislaine-maxwell-22-18632-f">Obama Presidential Library — FOIA Records on Epstein</a></li>
+    <li><span class="source-tag tag-court">COURT</span><a href="https://en.wikipedia.org/wiki/Epstein_files">Wikipedia — Epstein Files (comprehensive overview)</a></li>
+    <li><span class="source-tag tag-news">NEWS</span><a href="https://www.cbsnews.com/live-updates/epstein-files-released-doj-2026/">CBS — DOJ Releases 3 Million Documents</a></li>
+    <li><span class="source-tag tag-news">NEWS</span><a href="https://www.npr.org/2024/01/03/1222130537/jeffrey-epstein-court-records-reveal-men-clinton-prince-andrew">NPR — Court Documents Reveal Names</a></li>
+    <li><span class="source-tag tag-news">NEWS</span><a href="https://www.pbs.org/newshour/nation/a-list-of-powerful-men-named-in-the-epstein-files-from-elon-musk-to-former-prince-andrew">PBS — Named Individuals in Epstein Files</a></li>
+    <li><span class="source-tag tag-news">NEWS</span><a href="https://www.cnn.com/2026/02/15/politics/doj-epstein-files-prominent-people">CNN — DOJ List of Prominent People</a></li>
+    <li><span class="source-tag tag-news">NEWS</span><a href="https://www.aljazeera.com/news/2024/1/4/jeffrey-epstein-list-whose-names-are-on-the-newly-unsealed-documents">Al Jazeera — Unsealed Document Names</a></li>
+    <li><span class="source-tag tag-factcheck">FACT CHECK</span><a href="https://www.aap.com.au/factcheck/hanks-obama-among-names-on-fake-epstein-list/">AAP — Fabricated Visitor Lists Debunked</a></li>
+    <li><span class="source-tag tag-factcheck">FACT CHECK</span><a href="https://factually.co/fact-checks/politics/epstein-files-claims-about-obamas-a3558a">Factually — Epstein Claims About Obamas</a></li>
+  </ul>
+</section>
+
+<!-- Redaction Failures -->
+<section>
+  <h2>Redaction Failures &amp; Accountability Issues</h2>
+  <div class="person-card">
+    <div class="person-detail">
+      <strong>December 2025:</strong> Faulty redaction techniques in DOJ release — blacked-out text could be recovered by copy-pasting into another application. Public was able to read content DOJ intended to hide.<br><br>
+      <strong>January 2026:</strong> DOJ published dozens of unredacted nude images showing young women or possibly teenagers with faces visible. At least 43 victims' full names were exposed — victims who had never been publicly linked to Epstein. Survivor attorneys condemned the release as re-victimization.<br><br>
+      <strong>Congressional Response:</strong> Rep. Jamie Raskin sent a letter to DOJ questioning whether the releases complied with the law's intent. Bipartisan criticism that DOJ simultaneously over-redacted information about powerful individuals while under-protecting victims.
+    </div>
+    <div class="person-source">Source: <a href="https://democrats-judiciary.house.gov/sites/evo-subsites/democrats-judiciary.house.gov/files/evo-media-document/2026-01-31-raskin-to-blanche-doj-re-epstein-files.pdf">Raskin Letter to DOJ (PDF)</a>, <a href="https://www.nbcnews.com/politics/justice-department/doj-releases-new-trove-long-awaited-epstein-files-rcna256714">NBC News</a></div>
+  </div>
+</section>
+
+<footer>
+  This page documents publicly available information from official government releases and verified journalism.<br>
+  No speculation. No fabricated lists. Every claim sourced.<br>
+  &copy; 2026 pewpi-infinity | <a href="https://github.com/pewpi-infinity">GitHub</a>
+</footer>
+
+</div>
+</body>
+</html>
